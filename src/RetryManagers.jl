@@ -4,7 +4,7 @@ export RetryManager
 launchfile = joinpath(@__DIR__,"launchuntilsuccess.sh")
 
 function get_exename(oldexe)
-    return `bash /Net/Groups/BGI/people/fgans/bin/launchuntilsuccess.sh $oldexe`
+    return `bash $launchfile $oldexe`
 end
 
 struct RetryManager <: Distributed.ClusterManager
